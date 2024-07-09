@@ -6,6 +6,10 @@ module "gke_state_bucket" {
   google_storage_bucket_name = "terraform_state_bucket-2247699"
 }
 
-output "instance_ip" {
+output "key_ring_id" {
   value = module.gke_state_bucket.key_ring
+}
+
+output "key_id" {
+  value = module.gke_state_bucket.my_key
 }
