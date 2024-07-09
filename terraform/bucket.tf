@@ -7,3 +7,4 @@ module "gke_state_bucket" {
   google_storage_bucket_name = "terraform_state_bucket-2247699"
   google_storage_bucket_encryption_default_kms_key_name = "projects/sb-izal-20240703-111957/locations/europe-west3/keyRings/gke-keyring/cryptoKeys/gke-crypto-key"
 }
+
