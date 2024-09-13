@@ -1,3 +1,4 @@
+### Initial terraform state needed until state bucket is created
 # terraform {
 #   backend "local" {
 #     path = "terraform.tfstate"
