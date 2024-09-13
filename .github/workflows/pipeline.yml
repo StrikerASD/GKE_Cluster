@@ -40,10 +40,10 @@ jobs:
         uses: hashicorp/setup-terraform@v2
   
       - name: Terraform Init
-        run: terraform init
+        run: terraform -chdir=terraform init
   
       - name: Terraform Plan
-        run: terraform plan -out=plan.out
+        run: terraform -chdir=terraform plan -out=plan.out
   
       - name: Terraform Apply
-        run: terraform apply plan.out
+        run: terraform -chdir=terraform apply plan.out
