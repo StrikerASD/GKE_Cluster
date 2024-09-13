@@ -3,7 +3,7 @@ module "gke_state_bucket" {
   google_kms_key_ring_name                = "gke-keyring"
   google_kms_crypto_key_name              = "gke-crypto"
   google_kms_key_ring_project             = "sb-izal-20240910-144605"
-  google_kms_crypto_key_iam_member_member = "serviceAccount:gcp-github-access@sb-izal-20240910-144605.iam.gserviceaccount.com"
+  google_kms_crypto_key_iam_member_member = var.service_account
   google_storage_bucket_name              = "terraform_state_bucket-2247699"
 }
 
