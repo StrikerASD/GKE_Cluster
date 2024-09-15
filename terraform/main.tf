@@ -6,5 +6,5 @@ module "gke" {
   container_cluster_name      = "rancher-cluster"
   container_node_pool_name    = "worker-pool"
   google_compute_network_name = "gke-vpc"
-  deletion_protection         = false
+  deletion_protection         = true
 }
