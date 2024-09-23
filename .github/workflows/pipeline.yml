@@ -53,3 +53,4 @@ jobs:
 
       - name: Terraform Destroy
         run: terraform -chdir=terraform destroy --auto-approve
+
