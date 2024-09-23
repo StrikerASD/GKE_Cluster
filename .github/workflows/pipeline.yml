@@ -48,8 +48,8 @@ jobs:
       - name: Terraform Plan
         run: terraform -chdir=terraform plan -out=plan.out
   
-      - name: Terraform Apply
-        run: terraform -chdir=terraform apply --auto-approve plan.out
+      # - name: Terraform Apply
+      #   run: terraform -chdir=terraform apply --auto-approve plan.out
 
-#      - name: Terraform Destroy
-#        run: terraform -chdir=terraform destroy --auto-approve
+      - name: Terraform Destroy
+        run: terraform -chdir=terraform destroy --auto-approve
