@@ -57,9 +57,9 @@ jobs:
 
 ### Info: For unlocking the state
 
-      - name: Remove Terraform Lock File
-        run: |
-          gsutil rm gs://gke_terraform_state_bucket-2247699754/terraform/state/default.tflock || true
+#      - name: Remove Terraform Lock File
+#        run: |
+#          gsutil rm gs://gke_terraform_state_bucket-2247699754/terraform/state/default.tflock || true
 
       - name: Terraform Plan
         run: terraform -chdir=terraform plan -out=plan.out
