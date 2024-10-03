@@ -57,9 +57,9 @@ jobs:
 
 ### Info: For unlocking the state
 
-#      - name: Terraform Force Unlock
-#        if: always()
-#        run: terraform force-unlock -force 1727958898614788
+      - name: Terraform Force Unlock
+        if: always()
+        run: terraform force-unlock -force 1727958898614788
 
       - name: Terraform Plan
         run: terraform -chdir=terraform plan -out=plan.out
