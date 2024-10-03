@@ -6,8 +6,8 @@
 module "gke" {
   source                      = "github.com/StrikerASD/GKE"
   project                     = var.project_id
-  sa_account_id               = "${var.project_number}-compute"
-  sa_display_name             = "cluster service account"
+  sa_account_id               = var.default_compute_service_account
+  sa_display_name             = "Default compute service account"
   container_cluster_name      = "rancher-cluster"
   container_node_pool_name    = "worker-pool"
   google_compute_network_name = "gke-vpc"
