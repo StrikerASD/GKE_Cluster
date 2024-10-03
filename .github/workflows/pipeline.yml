@@ -55,6 +55,12 @@ jobs:
 #          PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
 #          PROJECT_NUMBER: ${{ secrets.GCP_PROJECT_NUMBER }}
 
+### Info: For unlocking the state
+
+      - name: Terraform Force Unlock
+        if: always()
+        run: terraform force-unlock -force 1727958898614788
+
       - name: Terraform Plan
         run: terraform -chdir=terraform plan -out=plan.out
 
